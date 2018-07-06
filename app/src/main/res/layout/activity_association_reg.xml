@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edebeb"
+    tools:context=".registration.AssociationReg">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbarback">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@color/white"
+                android:src="@drawable/assnlogo" />
+
+
+            <ImageView
+
+                android:id="@+id/ivMenu"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/menu_icon" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:background="@drawable/toolbarback" />
+
+                    <TextView
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/ic_home"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/tvass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/gorditablack"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvass"
+                        android:layout_margin="@dimen/_18sdp"
+                        android:background="@drawable/registdraw"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp">
+
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvAddr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edAddr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvAddr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edAddr2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvAddr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edAddr3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvZip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edZip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvRegno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edRegNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvRegDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/gorditalight"
+
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/edRegdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@drawable/editdraw"
+                            android:fontFamily="@font/gorditaregular"
+                            android:maxLength="50"
+                            android:minHeight="@dimen/_30sdp"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/block"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <Button
+                            android:id="@+id/btnSubmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/toolbarback"
+                            android:fontFamily="@font/gorditablack"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:text="submit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main2"
+            app:menu="@menu/activity_main2_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
