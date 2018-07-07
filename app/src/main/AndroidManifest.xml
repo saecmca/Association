@@ -28,10 +28,7 @@
             android:name=".registration.AssociationReg"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".main.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#edebeb"
     tools:context=".registration.AssociationReg">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/toolbarback">
+        android:background="@color/colorPrimary">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -19,20 +18,19 @@
 
             <ImageView
                 android:id="@+id/ivBack"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:background="@color/white"
-                android:src="@drawable/assnlogo" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
 
 
             <ImageView
 
                 android:id="@+id/ivMenu"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_28sdp"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_22sdp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:padding="@dimen/_5sdp"
+                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/menu_icon" />
         </RelativeLayout>
@@ -48,10 +46,12 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/assnbg">
 
 
             <ScrollView
+                android:layout_above="@+id/btnSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -59,20 +59,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_80sdp"
-                        android:background="@drawable/toolbarback" />
 
                     <TextView
-                        android:drawablePadding="@dimen/_10sdp"
-                        android:drawableLeft="@drawable/ic_home"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerInParent="true"
                         android:id="@+id/tvass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                         android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@color/tab"
                         android:fontFamily="@font/gorditablack"
                         android:gravity="center"
                         android:textColor="@color/white"
@@ -82,20 +74,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tvass"
-                        android:layout_margin="@dimen/_18sdp"
-                        android:background="@drawable/registdraw"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_15sdp">
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
 
 
                         <TextView
                             android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_15sdp"
                             android:fontFamily="@font/gorditalight"
-
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -106,11 +94,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvAddr1"
@@ -119,7 +108,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -130,11 +119,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvAddr2"
@@ -143,7 +133,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -154,11 +144,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvAddr3"
@@ -167,7 +158,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -178,11 +169,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvCity"
@@ -190,7 +182,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -201,11 +193,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvZip"
@@ -214,7 +207,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -225,11 +218,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvRegno"
@@ -238,7 +232,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -249,11 +243,12 @@
                             android:background="@drawable/editdraw"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
+                            android:minHeight="@dimen/_35sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_13sdp" />
 
                         <TextView
                             android:id="@+id/tvRegDate"
@@ -262,43 +257,42 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/gorditalight"
 
-                            android:textColor="@color/block"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
-                            android:focusable="false"
                             android:id="@+id/edRegdate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_2sdp"
                             android:background="@drawable/editdraw"
+                            android:focusable="false"
                             android:fontFamily="@font/gorditaregular"
                             android:maxLength="50"
-                            android:minHeight="@dimen/_30sdp"
-                            android:paddingLeft="@dimen/_3sdp"
-                            android:singleLine="true"
-                            android:textColor="@color/block"
-                            android:textSize="@dimen/_12sdp" />
-
-                        <Button
-                            android:id="@+id/btnSubmit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_35sdp"
-                            android:layout_marginBottom="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_15sdp"
-                            android:background="@drawable/toolbarback"
-                            android:fontFamily="@font/gorditablack"
+                            android:minHeight="@dimen/_35sdp"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:text="submit"
+                            android:singleLine="true"
                             android:textColor="@color/white"
+                            android:textColorHint="@color/white"
                             android:textSize="@dimen/_13sdp" />
+
+
                     </LinearLayout>
                 </RelativeLayout>
 
             </ScrollView>
 
-
+            <Button
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/toolbarback"
+                android:fontFamily="@font/gorditablack"
+                android:text="submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
         <android.support.design.widget.NavigationView

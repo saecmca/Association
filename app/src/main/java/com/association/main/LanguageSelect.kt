@@ -3,11 +3,15 @@ package com.association.main
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.Toast
 import com.association.R
 import com.association.common.Localsorage
 import com.association.common.Progresdialog
+import com.association.common.RecyclerItemClickListener
 import com.association.registration.AssociationReg
 import com.association.registration.LangResp
 import com.association.services.RestClient
@@ -16,7 +20,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LanguageSelect : AppCompatActivity(), View.OnClickListener {
-    lateinit var lngSpin: Spinner
+    lateinit var rclview: RecyclerView
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.btnProced -> {
@@ -32,8 +36,8 @@ class LanguageSelect : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_language_select)
         findViewById<Button>(R.id.btnProced).setOnClickListener(this)
-        findViewById<ImageView>(R.id.ivBack).visibility = View.GONE
-        lngSpin = findViewById(R.id.spinLang)
+
+        rclview = findViewById(R.id.rclv)
         callStoreWebservice()
     }
 
@@ -48,28 +52,19 @@ class LanguageSelect : AppCompatActivity(), View.OnClickListener {
                     val storeResp = response.body()
                     Progresdialog.dismissDialog()
                     if (storeResp!!.status.statusID != null && storeResp.status.statusID.equals("1")) {
+                        rclview.layoutManager = LinearLayoutManager(this@LanguageSelect, LinearLayoutManager.VERTICAL, false)
+                        var langadap = LanguageAdapter(this@LanguageSelect, storeResp.language_Details_List)
+                        rclview.adapter = langadap
+                        Localsorage.setLangPref(this@LanguageSelect, storeResp.language_Details_List.get(0).language_Name, storeResp.language_Details_List.get(0).language_Id)
+                        rclview.addOnItemTouchListener(RecyclerItemClickListener(this@LanguageSelect, object : RecyclerItemClickListener.OnItemClickListener {
+                            override fun onItemClick(view: View, position: Int) {
+                                langadap.setSelectedIndex(position)
 
-                        val arrspin = arrayListOf<String>()
-                        for (i in 0 until storeResp.language_Details_List.size) {
-                            arrspin.add(storeResp.language_Details_List.get(i).language_Name)
-                        }
-                        lngSpin.adapter = ArrayAdapter(this@LanguageSelect, android.R.layout.simple_spinner_dropdown_item, arrspin)
-                        lngSpin.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
-                                for (i in 0 until storeResp.language_Details_List.size) {
-                                    if (storeResp.language_Details_List.get(i).language_Name.equals(parent.getItemAtPosition(pos).toString())) {
-                                        Localsorage.setLangPref(this@LanguageSelect, storeResp.language_Details_List.get(i).language_Name, storeResp.language_Details_List.get(i).language_Id)
-
-                                    }
-                                }
+                                Localsorage.setLangPref(this@LanguageSelect, storeResp.language_Details_List.get(position).language_Name, storeResp.language_Details_List.get(position).language_Id)
 
                             }
+                        }))
 
-                            override fun onNothingSelected(parent: AdapterView<out Adapter>?) {
-
-                            }
-
-                        }
                     } else {
 
                         Toast.makeText(applicationContext, storeResp.status.statusDescription, Toast.LENGTH_SHORT).show()

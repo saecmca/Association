@@ -4,14 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
-
-    <com.qintong.library.InsLoadingView
-        android:layout_centerInParent="true"
-        android:id="@+id/loading_view"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        app:start_color="@color/blue"
-        app:end_color="#FFFFD900"
-        app:status="loading"
-        android:src="@mipmap/ic_launcher"/>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicator="BallPulse"
+        app:indicator_color="@color/colorPrimary"
+        />
 </LinearLayout>

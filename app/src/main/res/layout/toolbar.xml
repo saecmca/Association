@@ -14,9 +14,9 @@
 
             <ImageView
                 android:id="@+id/ivBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_back" />
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/home" />
 
             <TextView
                 android:layout_width="wrap_content"

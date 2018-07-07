@@ -4,35 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg1"
     tools:context=".main.LanguageSelect">
 
-    <include layout="@layout/toolbar" />
-
-    <ImageView
-        android:layout_marginTop="@dimen/_95sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_30sdp"
-        android:src="@drawable/assnlogo" />
-
-    <Spinner
-        android:id="@+id/spinLang"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tooolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_above="@+id/btnProced"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="@dimen/_40sdp"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_30sdp"
-        android:background="@drawable/spin" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_launcher" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_33sdp"
+        android:layout_below="@+id/tooolbar"
+        android:background="@color/tab"
+        android:fontFamily="@font/gorditablack"
+        android:gravity="center"
+        android:text="@string/language"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rclv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvass"
+        android:layout_marginTop="@dimen/_10sdp" />
+
 
     <Button
         android:id="@+id/btnProced"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_25sdp"
         android:background="@drawable/toolbarback"
         android:fontFamily="@font/gorditablack"
         android:inputType="text"

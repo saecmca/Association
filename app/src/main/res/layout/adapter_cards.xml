@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/food_bev"
+    android:layout_height="@dimen/_50sdp">
+
+    <ImageView
+        android:id="@+id/ivflag"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/city_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/ivflag"
+
+        android:fontFamily="@font/gorditaregular"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="aasfasdfasf"
+        android:textColor="@color/block"
+        android:textSize="@dimen/_14sdp"
+        tools:ignore="MissingPrefix" />
+
+    <ImageView
+        android:id="@+id/cards_btn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:src="@drawable/lan_check"
+        android:gravity="center"
+
+        />
+
+
+</RelativeLayout>
